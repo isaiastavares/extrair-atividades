@@ -3,6 +3,7 @@ package br.com.ms.atividade.wrapper;
 import java.io.IOException;
 import java.util.logging.Logger;
 
+import br.com.ms.util.Arquivo;
 import br.com.ms.util.PDFManager;
 
 public abstract class AtividadeWrapperAbstractBase {
@@ -11,10 +12,12 @@ public abstract class AtividadeWrapperAbstractBase {
 
 	protected static final String nomeArquivo = "AtividadesExtraidas";
 
-	protected String convertPDFToText(String caminhoPDF) {
+	protected abstract void extrairAtividades(String caminhoPDF, String caminhoArquivoSaida);
+
+	protected String convertPDFToText() {
 		try {
 			PDFManager pdfManager = new PDFManager();
-			pdfManager.setFilePath(caminhoPDF);
+			pdfManager.setFilePath(getCaminhoPDF());
 			return pdfManager.toText();
 		} catch (IOException e) {
 			LOG.severe(e.getMessage());
@@ -22,8 +25,18 @@ public abstract class AtividadeWrapperAbstractBase {
 		return null;
 	}
 
-	protected abstract void extrairAtividades(String caminhoPDF, String caminhoSaida);
+	protected void salvar() {
+		Arquivo.salvarArquivo(getCaminhoArquivoSaida(),
+				nomeArquivo + getFormatoArquivo(),
+				getConteudoArquivoSaida());
+	}
 
-	protected abstract String getNomeArquivo();
+	protected abstract String getCaminhoPDF();
+
+	protected abstract String getConteudoArquivoSaida();
+
+	protected abstract String getCaminhoArquivoSaida();
+
+	protected abstract String getFormatoArquivo();
 
 }
