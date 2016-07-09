@@ -23,7 +23,7 @@ public class DocumentParseAdapter {
 			wrapperAtividades.wrapperAtividades(caminhoPDF, caminhoSaida, formatoSaida);
 			break;
 		default:
-			LOG.info("Tipo de documento n„o reconhecido: " + tipoDocumento.getNomeDocumento());
+			LOG.info("Tipo de documento n√£o reconhecido: " + tipoDocumento.getNomeDocumento());
 			break;
 		}
 

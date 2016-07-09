@@ -14,7 +14,7 @@ public class AtividadeWrapperXml extends AtividadeWrapperAbstractBase {
 	protected void extrairAtividades(String caminhoPDF, String caminhoArquivoSaida) {
 		this.caminhoPDF = caminhoPDF;
 		this.caminhoArquivoSaida = caminhoArquivoSaida;
-		throw new NotImplementedException("ExtraÁ„o de Atividades no Formato XML ainda n„o est· implementado");
+		throw new NotImplementedException("Extra√ß√£o de Atividades no Formato XML ainda n√£o est√° implementado");
 	}
 
 	@Override

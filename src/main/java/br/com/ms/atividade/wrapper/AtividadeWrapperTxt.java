@@ -8,14 +8,14 @@ import br.com.ms.enums.FORMATO_SAIDA;
 
 public class AtividadeWrapperTxt extends AtividadeWrapperAbstractBase {
 
-	private static final String PATTERN_TITULO_TRABALHO = "Título do trabalho: (.*)";
-	private static final String PATTERN_TITULO_PROJETO = "Título do Projeto: (.*)";
-	private static final String PATTERN_DESCRICAO= "Descrição: (.*)";
-	private static final String PATTERN_DESCRICAO_ATIVIDADE = "Descrição da atividade: (.*)";
-	private static final String PATTERN_DESCRICAO_CLIENTELA = "Descrição da clientela: (.*)";
-	private static final String PATTERN_DESCRICAO_COMPLEMENTAR = "Descrição Complementar: (.*)";
+	private static final String PATTERN_TITULO_TRABALHO = "TÃ­tulo do trabalho: (.*)";
+	private static final String PATTERN_TITULO_PROJETO = "TÃ­tulo do Projeto: (.*)";
+	private static final String PATTERN_DESCRICAO= "DescriÃ§Ã£o: (.*)";
+	private static final String PATTERN_DESCRICAO_ATIVIDADE = "DescriÃ§Ã£o da atividade: (.*)";
+	private static final String PATTERN_DESCRICAO_CLIENTELA = "DescriÃ§Ã£o da clientela: (.*)";
+	private static final String PATTERN_DESCRICAO_COMPLEMENTAR = "DescriÃ§Ã£o Complementar: (.*)";
 	private static final String PATTERN_TABELA = "Tabela: (.*)";
-	private static final String PATTERN_CHA_DTINI_DTFIM = "CHA: ([0-9]+) Data [a-zA-Z]nício: ([0-9]{2}\\/[0-9]{2}\\/[0-9]{4}) Data [a-zA-Z]érmino: ([0-9]{2}\\/[0-9]{2}\\/[0-9]{4}) *";
+	private static final String PATTERN_CHA_DTINI_DTFIM = "CHA: ([0-9]+) Data [a-zA-Z]nÃ­cio: ([0-9]{2}\\/[0-9]{2}\\/[0-9]{4}) Data [a-zA-Z]Ã©rmino: ([0-9]{2}\\/[0-9]{2}\\/[0-9]{4}) *";
 
 	private static final String QUEBRA_DE_LINHA = "\n";
 	private int sequencialAtividade = 0;
@@ -98,6 +98,7 @@ public class AtividadeWrapperTxt extends AtividadeWrapperAbstractBase {
 		atividadesExtraidas.append(extrairAtividadesExtensao(atividadesExtensao.toString()));
 		atividadesExtraidas.append(extrairAtividadesQualificacao(atividadesQualificacao.toString()));
 		atividadesExtraidas.append(extrairAtividadesAcademicas(atividadesAcademicas.toString()));
+		System.out.println(atividadesAdministrativas.toString());
 		atividadesExtraidas.append(extrairAtividadesAdministrativas(atividadesAdministrativas.toString()));
 
 		this.conteudoArquivoSaida = atividadesExtraidas.toString();

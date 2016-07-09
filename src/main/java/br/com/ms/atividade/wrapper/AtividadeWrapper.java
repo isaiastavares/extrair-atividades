@@ -25,7 +25,7 @@ public class AtividadeWrapper {
 			atividadeWrapperXml.extrairAtividades(caminhoPDF, caminhoSaida);
 			break;
 		default:
-			LOG.info("Formato n„o reconhecido: " + formatoSaida.getNomeFormato());
+			LOG.info("Formato n√£o reconhecido: " + formatoSaida.getNomeFormato());
 			break;
 		}
 

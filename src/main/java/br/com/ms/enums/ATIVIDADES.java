@@ -2,11 +2,11 @@ package br.com.ms.enums;
 
 public enum ATIVIDADES {
 
-	ATIVIDADES_ORIENTACAO(1, "Atividades de orientação"),
+	ATIVIDADES_ORIENTACAO(1, "Atividades de orientaÃ§Ã£o"),
 	ATIVIDADES_PROJETOS(2, "Atividades em projetos"),
-	ATIVIDADES_EXTENSAO(3, "Atividades de extensão"),
-	ATIVIDADES_QUALIFICACAO(4, "Atividades de qualificação"),
-	ATIVIDADES_ACADEMICAS(5, "Atividades acadêmicas especiais"),
+	ATIVIDADES_EXTENSAO(3, "Atividades de extensÃ£o"),
+	ATIVIDADES_QUALIFICACAO(4, "Atividades de qualificaÃ§Ã£o"),
+	ATIVIDADES_ACADEMICAS(5, "Atividades acadÃªmicas especiais"),
 	ATIVIDADES_ADMINISTRATIVAS(6, "Atividades administrativas");
 
 	private String nomeAtividade;
