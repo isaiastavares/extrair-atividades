@@ -6,12 +6,12 @@ package br.com.ms.enums;
  */
 public enum ATIVIDADES {
 
-	ATIVIDADES_ORIENTACAO(1, "AtividadeWrapper de orienta\u00e7\u00e3o"),
-	ATIVIDADES_PROJETOS(2, "AtividadeWrapper em projetos"),
-	ATIVIDADES_EXTENSAO(3, "AtividadeWrapper de extens\u00e3o"),
-	ATIVIDADES_QUALIFICACAO(4, "AtividadeWrapper de qualifica\u00e7\u00e3o"),
-	ATIVIDADES_ACADEMICAS(5, "AtividadeWrapper acad\u00eamicas especiais"),
-	ATIVIDADES_ADMINISTRATIVAS(6, "AtividadeWrapper administrativas");
+	ATIVIDADES_ORIENTACAO(1, "Atividades de orientação"),
+	ATIVIDADES_PROJETOS(2, "Atividades em projetos"),
+	ATIVIDADES_EXTENSAO(3, "Atividades de extensão"),
+	ATIVIDADES_QUALIFICACAO(4, "Atividades de qualificação"),
+	ATIVIDADES_ACADEMICAS(5, "Atividades acadêmicas especiais"),
+	ATIVIDADES_ADMINISTRATIVAS(6, "Atividades administrativas");
 
 	private String nomeAtividade;
 	private int ordem;

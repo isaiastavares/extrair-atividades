@@ -1,12 +1,12 @@
 package br.com.ms;
 
+import java.io.File;
+import java.io.IOException;
+
 import br.com.ms.enums.FORMATO_SAIDA;
 import br.com.ms.enums.TIPO_DOCUMENTO;
 import br.com.ms.util.Arquivo;
 import br.com.ms.util.PDFManager;
-
-import java.io.File;
-import java.io.IOException;
 
 public class ExtrairAtividades {
 
@@ -31,13 +31,14 @@ public class ExtrairAtividades {
                         System.err.println(e.getMessage());
                     }
                 } else {
-                    System.err.println("Arquivo informado n\u00e3o foi encontrado");
+                    System.err.println("Arquivo informado não foi encontrado");
                 }
             } else {
-                System.err.println("Diretório de destino n\u00e3o existe.");
+                System.err.println("Diretório de destino não existe.");
             }
         } else {
-            System.err.println("Informe como primeiro par\u00e2metro com o nome do arquivo RADOC e segundo par\u00e2metro o destino do aquivo AtividadesExtraidas.txt");
+            System.err.println("Informe como primeiro parâmetro com o nome do arquivo RADOC e segundo parâmetro o destino do aquivo AtividadesExtraídas.txt");
         }
     }
+
 }

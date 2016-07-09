@@ -12,8 +12,8 @@ public class AtividadeWrapperXml implements IAtividadeWrapper {
 	 * TODO implementar caso queira extrair para XML posteriormente
 	 */
     public String extrairAtividades(String conteudoPDF) {
-        throw new NotImplementedException("Extra\u00e7\u00e3o de AtividadeWrapper no Formato XML "
-        		+ "ainda n\u00e3o est\u00e1 implementado");
+        throw new NotImplementedException("Extração de Atividades no Formato XML "
+        		+ "ainda não está implementado");
     }
 
 }

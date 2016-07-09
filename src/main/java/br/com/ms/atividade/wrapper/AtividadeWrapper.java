@@ -34,7 +34,7 @@ public class AtividadeWrapper {
             case XML:
                 return atividadeWrapperXml.extrairAtividades(conteudoPDF);
             default:
-                throw new NotImplementedException("Formato n\u00e3o implementado:" + formatoSaida.getNomeFormato());
+                throw new NotImplementedException("Formato não implementado:" + formatoSaida.getNomeFormato());
         }
     }
 

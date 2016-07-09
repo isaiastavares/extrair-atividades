@@ -20,8 +20,8 @@ public class ATIVIDADESTest {
 
 	@Test
 	public void testAtividadesOrientacaoGetNomeAtividadeDeveRetornarAtividadeDeOrientacao() {
-		assertTrue("Enum ATIVIDADES_ORIENTACAO deveria ter o nome AtividadeWrapper de orienta\u00e7\u00e3o",
-				ATIVIDADES.ATIVIDADES_ORIENTACAO.getNomeAtividade().equals("AtividadeWrapper de orienta\u00e7\u00e3o"));
+		assertTrue("Enum ATIVIDADES_ORIENTACAO deveria ter o nome Atividades de orienta\u00e7\u00e3o",
+				ATIVIDADES.ATIVIDADES_ORIENTACAO.getNomeAtividade().equals("Atividades de orienta\u00e7\u00e3o"));
 	}
 
 	@Test
@@ -39,8 +39,8 @@ public class ATIVIDADESTest {
 
 	@Test
 	public void testAtividadesEmProjetosGetNomeAtividadeDeveRetornarAtividadeEmProjetos() {
-		assertTrue("Enum ATIVIDADES_PROJETOS deveria ter o nome AtividadeWrapper em projetos",
-				ATIVIDADES.ATIVIDADES_PROJETOS.getNomeAtividade().equals("AtividadeWrapper em projetos"));
+		assertTrue("Enum ATIVIDADES_PROJETOS deveria ter o nome Atividades em projetos",
+				ATIVIDADES.ATIVIDADES_PROJETOS.getNomeAtividade().equals("Atividades em projetos"));
 	}
 
 	@Test
@@ -57,8 +57,8 @@ public class ATIVIDADESTest {
 
 	@Test
 	public void testAtividadesDeExtensaoGetNomeAtividadeDeveRetornarAtividadeDeExtensao() {
-		assertTrue("Enum ATIVIDADES_EXTENSAO deveria ter o nome AtividadeWrapper de extens\u00e3o",
-				ATIVIDADES.ATIVIDADES_EXTENSAO.getNomeAtividade().equals("AtividadeWrapper de extens\u00e3o"));
+		assertTrue("Enum ATIVIDADES_EXTENSAO deveria ter o nome Atividades de extens\u00e3o",
+				ATIVIDADES.ATIVIDADES_EXTENSAO.getNomeAtividade().equals("Atividades de extens\u00e3o"));
 	}
 
 	@Test
@@ -75,8 +75,8 @@ public class ATIVIDADESTest {
 
 	@Test
 	public void testAtividadesDeQualificacaoGetNomeAtividadeDeveRetornarAtividadeDeQualificacao() {
-		assertTrue("Enum ATIVIDADES_QUALIFICACAO deveria ter o nome AtividadeWrapper de qualifica\u00e7\u00e3o",
-				ATIVIDADES.ATIVIDADES_QUALIFICACAO.getNomeAtividade().equals("AtividadeWrapper de qualifica\u00e7\u00e3o"));
+		assertTrue("Enum ATIVIDADES_QUALIFICACAO deveria ter o nome Atividades de qualifica\u00e7\u00e3o",
+				ATIVIDADES.ATIVIDADES_QUALIFICACAO.getNomeAtividade().equals("Atividades de qualifica\u00e7\u00e3o"));
 	}
 
 	@Test
@@ -93,8 +93,8 @@ public class ATIVIDADESTest {
 
 	@Test
 	public void testAtividadesAcademicasGetNomeAtividadeDeveRetornarAtividadesAcademicas() {
-		assertTrue("Enum ATIVIDADES_ACADEMICAS deveria ter o nome AtividadeWrapper acad\u00eamicas especiais",
-				ATIVIDADES.ATIVIDADES_ACADEMICAS.getNomeAtividade().equals("AtividadeWrapper acad\u00eamicas especiais"));
+		assertTrue("Enum ATIVIDADES_ACADEMICAS deveria ter o nome Atividades acad\u00eamicas especiais",
+				ATIVIDADES.ATIVIDADES_ACADEMICAS.getNomeAtividade().equals("Atividades acad\u00eamicas especiais"));
 	}
 
 	@Test
@@ -111,8 +111,8 @@ public class ATIVIDADESTest {
 
 	@Test
 	public void testAtividadesAdministrativasGetNomeAtividadeDeveRetornarAtividadesAdministrativas() {
-		assertTrue("Enum ATIVIDADES_ADMINISTRATIVAS deveria ter o nome AtividadeWrapper administrativas",
-				ATIVIDADES.ATIVIDADES_ADMINISTRATIVAS.getNomeAtividade().equals("AtividadeWrapper administrativas"));
+		assertTrue("Enum ATIVIDADES_ADMINISTRATIVAS deveria ter o nome Atividades administrativas",
+				ATIVIDADES.ATIVIDADES_ADMINISTRATIVAS.getNomeAtividade().equals("Atividades administrativas"));
 	}
 
 	@Test

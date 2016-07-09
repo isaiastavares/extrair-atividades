@@ -32,7 +32,7 @@ public class DocumentParseAdapter {
             case RADOC:
                 return wrapperAtividades.wrapperAtividades(conteudoPDF, formatoSaida);
             default:
-                throw new NotImplementedException("Tipo de documento n\u00e3o implementado: "
+                throw new NotImplementedException("Tipo de documento não implementado: "
                 		+ tipoDocumento.getNomeDocumento());
         }
 
