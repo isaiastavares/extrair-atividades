@@ -3,6 +3,7 @@ package br.com.ms.util;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.net.URL;
+import java.nio.charset.Charset;
 import java.util.Formatter;
 import java.util.logging.Logger;
 
@@ -19,6 +20,7 @@ public final class Arquivo {
 		File file = new File(caminho, nomeArquivo);
 		try {
 			Formatter saida = new Formatter(file);
+			Charset.forName("UTF-8").encode(conteudo);
 			saida.format(conteudo);
 			saida.close();
 			LOG.info("Arquivo salvo com sucesso no caminho: " + file.getAbsolutePath());

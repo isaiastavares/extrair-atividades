@@ -1,7 +1,12 @@
 package br.com.ms.atividade.wrapper;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.regex.MatchResult;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import org.apache.commons.lang.StringUtils;
 
 import br.com.ms.enums.ATIVIDADES;
 import br.com.ms.enums.FORMATO_SAIDA;
@@ -10,7 +15,7 @@ public class AtividadeWrapperTxt extends AtividadeWrapperAbstractBase {
 
 	private static final String PATTERN_TITULO_TRABALHO = "Título do trabalho: (.*)";
 	private static final String PATTERN_TITULO_PROJETO = "Título do Projeto: (.*)";
-	private static final String PATTERN_DESCRICAO= "Descrição: (.*)";
+	private static final String PATTERN_DESCRICAO= "Descrição:(.*)";
 	private static final String PATTERN_DESCRICAO_ATIVIDADE = "Descrição da atividade: (.*)";
 	private static final String PATTERN_DESCRICAO_CLIENTELA = "Descrição da clientela: (.*)";
 	private static final String PATTERN_DESCRICAO_COMPLEMENTAR = "Descrição Complementar: (.*)";
@@ -98,7 +103,6 @@ public class AtividadeWrapperTxt extends AtividadeWrapperAbstractBase {
 		atividadesExtraidas.append(extrairAtividadesExtensao(atividadesExtensao.toString()));
 		atividadesExtraidas.append(extrairAtividadesQualificacao(atividadesQualificacao.toString()));
 		atividadesExtraidas.append(extrairAtividadesAcademicas(atividadesAcademicas.toString()));
-		System.out.println(atividadesAdministrativas.toString());
 		atividadesExtraidas.append(extrairAtividadesAdministrativas(atividadesAdministrativas.toString()));
 
 		this.conteudoArquivoSaida = atividadesExtraidas.toString();
@@ -284,10 +288,19 @@ public class AtividadeWrapperTxt extends AtividadeWrapperAbstractBase {
 
 	private String extrairAtividadesAdministrativas(String atividade) {
 		StringBuilder sb = new StringBuilder();
+
 		String[] linhas = atividade.split(QUEBRA_DE_LINHA);
+		List<String> list = Arrays.asList(linhas);
+
+//		String descricaoCustomizada = "";
+//		Pattern patternDescricaoCustomizada = Pattern.compile("(.*Descrição:\\s+)(.*)(\\s+Órgão emissor.*)");
+//		Matcher matcher = patternDescricaoCustomizada.matcher(atividade);
+//		if (matcher.find()) {
+//			descricaoCustomizada = matcher.group(2);
+//		}
 
 		String tabela = "";
-		for (String linha : linhas) {
+		for (String linha : list) {
 			Pattern patternTabela = Pattern.compile(PATTERN_TABELA);
 			Matcher matcherTabela = patternTabela.matcher(linha);
 			if (matcherTabela.find()) {
@@ -300,7 +313,19 @@ public class AtividadeWrapperTxt extends AtividadeWrapperAbstractBase {
 				sb.append("descricaoAtividade: ");
 				sb.append(tabela);
 				sb.append(" - ");
-				sb.append(matcherDescricao.group(1));
+				int posicaoDescricao = list.indexOf(linha);
+				List<String> subList = list.subList(posicaoDescricao, list.size() - 1);
+				StringBuilder subListBuilder = new StringBuilder();
+				for (String string : subList) {
+					subListBuilder.append(string + QUEBRA_DE_LINHA);
+				}
+				String descricaoCustomizada = "";
+				Pattern patternDescricaoCustomizada = Pattern.compile("(Descrição:.*\n)(.*)(\r\n)(.*)(\nÓrgão emissor.*)");
+				Matcher matcher = patternDescricaoCustomizada.matcher(subListBuilder.toString());
+				if (matcher.find()) {
+					descricaoCustomizada = matcher.group(2) + matcher.group(4);
+				}
+				sb.append(StringUtils.isNotBlank(descricaoCustomizada) ? descricaoCustomizada : matcherDescricao.group(1));
 				sb.append(QUEBRA_DE_LINHA);
 			}
 
