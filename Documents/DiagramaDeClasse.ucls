@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.1.10" icons="true" automaticImage="JPEG" always-add-relationships="false" 
+  generalizations="true" realizations="true" associations="true" dependencies="false" nesting-relationships="true" 
+  router="FAN">  
+  <enumeration id="1" language="java" name="br.com.ms.enums.ATIVIDADES" project="trabalho_final" 
+    file="/trabalho_final/src/main/java/br/com/ms/enums/ATIVIDADES.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="279" width="248" x="3" y="110"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </enumeration>  
+  <class id="2" language="java" name="br.com.ms.util.PDFManager" project="trabalho_final" 
+    file="/trabalho_final/src/main/java/br/com/ms/util/PDFManager.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="243" width="163" x="291" y="110"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <enumeration id="3" language="java" name="br.com.ms.enums.FORMATO_SAIDA" project="trabalho_final" 
+    file="/trabalho_final/src/main/java/br/com/ms/enums/FORMATO_SAIDA.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="189" width="181" x="494" y="110"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </enumeration>  
+  <enumeration id="4" language="java" name="br.com.ms.enums.TIPO_DOCUMENTO" project="trabalho_final" 
+    file="/trabalho_final/src/main/java/br/com/ms/enums/TIPO_DOCUMENTO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="135" width="161" x="715" y="110"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </enumeration>  
+  <class id="5" language="java" name="br.com.ms.atividade.wrapper.AtividadeWrapperXml" project="trabalho_final" 
+    file="/trabalho_final/src/main/java/br/com/ms/atividade/wrapper/AtividadeWrapperXml.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1557" y="771"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="br.com.ms.util.Arquivo" project="trabalho_final" 
+    file="/trabalho_final/src/main/java/br/com/ms/util/Arquivo.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="171" width="220" x="916" y="110"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="br.com.ms.DocumentParseAdapter" project="trabalho_final" 
+    file="/trabalho_final/src/main/java/br/com/ms/DocumentParseAdapter.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="336" x="1419" y="110"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="8" language="java" name="br.com.ms.pojo.AtividadesPojo" project="trabalho_final" 
+    file="/trabalho_final/src/main/java/br/com/ms/pojo/AtividadesPojo.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="351" width="203" x="1176" y="110"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="9" language="java" name="ExtrairAtividades" project="trabalho_final" 
+    file="/trabalho_final/src/main/java/ExtrairAtividades.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="121" x="1795" y="110"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="10" language="java" name="br.com.ms.atividade.wrapper.AtividadeWrapperTxt" project="trabalho_final" 
+    file="/trabalho_final/src/main/java/br/com/ms/atividade/wrapper/AtividadeWrapperTxt.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="513" width="257" x="1147" y="676"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="11" language="java" name="br.com.ms.atividade.wrapper.AtividadeWrapper" project="trabalho_final" 
+    file="/trabalho_final/src/main/java/br/com/ms/atividade/wrapper/AtividadeWrapper.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="99" width="277" x="1419" y="501"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="12" language="java" name="br.com.ms.atividade.wrapper.AtividadeWrapperAbstractBase" 
+    project="trabalho_final" 
+    file="/trabalho_final/src/main/java/br/com/ms/atividade/wrapper/AtividadeWrapperAbstractBase.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="135" width="207" x="1172" y="501"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="13" language="java" name="br.com.ms.DocumentParseAdapterTest" project="trabalho_final" 
+    file="/trabalho_final/src/test/java/br/com/ms/DocumentParseAdapterTest.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1796" y="389"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <association id="14">    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="15" name="atividadeWrapperXml"/>      
+      <multiplicity id="16" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="17">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="12"/>  
+  </generalization>  
+  <generalization id="18">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="12"/>  
+  </generalization>  
+  <association id="19">    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="20" name="atividadeWrapperTxt"/>      
+      <multiplicity id="21" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="10" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="22">    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="23" name="wrapperAtividades"/>      
+      <multiplicity id="24" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="11" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="25">    
+    <end type="SOURCE" refId="13" navigable="false">      
+      <attribute id="26" name="documentParseAdapter"/>      
+      <multiplicity id="27" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>
