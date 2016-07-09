@@ -1,34 +1,27 @@
 package br.com.ms.atividade.wrapper;
 
-import java.util.logging.Logger;
-
 import br.com.ms.enums.FORMATO_SAIDA;
+import org.apache.commons.lang.NotImplementedException;
 
 public class AtividadeWrapper {
 
-	private static final Logger LOG = Logger.getLogger(AtividadeWrapper.class.getName());
+    private AtividadeWrapperTxt atividadeWrapperTxt;
+    private AtividadeWrapperXml atividadeWrapperXml;
 
-	private AtividadeWrapperTxt atividadeWrapperTxt;
-	private AtividadeWrapperXml atividadeWrapperXml;
+    public AtividadeWrapper() {
+        atividadeWrapperTxt = new AtividadeWrapperTxt();
+        atividadeWrapperXml = new AtividadeWrapperXml();
+    }
 
-	public AtividadeWrapper() {
-		atividadeWrapperTxt = new AtividadeWrapperTxt();
-		atividadeWrapperXml = new AtividadeWrapperXml();
-	}
-
-	public void wrapperAtividades(String caminhoPDF, String caminhoSaida, FORMATO_SAIDA formatoSaida) {
-		switch (formatoSaida) {
-		case TXT:
-			atividadeWrapperTxt.extrairAtividades(caminhoPDF, caminhoSaida);
-			break;
-		case XML:
-			atividadeWrapperXml.extrairAtividades(caminhoPDF, caminhoSaida);
-			break;
-		default:
-			LOG.info("Formato não reconhecido: " + formatoSaida.getNomeFormato());
-			break;
-		}
-
-	}
+    public String wrapperAtividades(String conteudoPDF, FORMATO_SAIDA formatoSaida) {
+        switch (formatoSaida) {
+            case TXT:
+                return atividadeWrapperTxt.extrairAtividades(conteudoPDF);
+            case XML:
+                return atividadeWrapperXml.extrairAtividades(conteudoPDF);
+            default:
+                throw new NotImplementedException("Formato não implementado:" + formatoSaida.getNomeFormato());
+        }
+    }
 
 }

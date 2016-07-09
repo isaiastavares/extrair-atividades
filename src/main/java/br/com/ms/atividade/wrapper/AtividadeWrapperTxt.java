@@ -25,22 +25,15 @@ public class AtividadeWrapperTxt extends AtividadeWrapperAbstractBase {
 	private static final String QUEBRA_DE_LINHA = "\n";
 	private int sequencialAtividade = 0;
 
-	private String caminhoPDF;
-	private String caminhoArquivoSaida;
-	private String conteudoArquivoSaida;
-
-	StringBuilder atividadesOrientacao;
-	StringBuilder atividadesProjeto;
-	StringBuilder atividadesExtensao;
-	StringBuilder atividadesQualificacao;
-	StringBuilder atividadesAcademicas;
-	StringBuilder atividadesAdministrativas;
+	private StringBuilder atividadesOrientacao;
+	private StringBuilder atividadesProjeto;
+	private StringBuilder atividadesExtensao;
+	private StringBuilder atividadesQualificacao;
+	private StringBuilder atividadesAcademicas;
+	private StringBuilder atividadesAdministrativas;
 
 	@Override
-	protected void extrairAtividades(String caminhoPDF, String caminhoArquivoSaida) {
-		this.caminhoPDF = caminhoPDF;
-		this.caminhoArquivoSaida = caminhoArquivoSaida;
-		String conteudoPDF = convertPDFToText();
+	protected String extrairAtividades(String conteudoPDF) {
 
 		String[] linha = conteudoPDF.split(QUEBRA_DE_LINHA);
 
@@ -105,8 +98,7 @@ public class AtividadeWrapperTxt extends AtividadeWrapperAbstractBase {
 		atividadesExtraidas.append(extrairAtividadesAcademicas(atividadesAcademicas.toString()));
 		atividadesExtraidas.append(extrairAtividadesAdministrativas(atividadesAdministrativas.toString()));
 
-		this.conteudoArquivoSaida = atividadesExtraidas.toString();
-		salvar();
+		return atividadesExtraidas.toString();
 	}
 
 	private String extrairAtividadesOrientacao(String atividade) {
@@ -349,26 +341,6 @@ public class AtividadeWrapperTxt extends AtividadeWrapperAbstractBase {
 	private String getSequencialAtividade() {
 		sequencialAtividade++;
 		return "sequencialAtividade: " + sequencialAtividade + QUEBRA_DE_LINHA;
-	}
-
-	@Override
-	protected String getCaminhoPDF() {
-		return caminhoPDF;
-	}
-
-	@Override
-	protected String getConteudoArquivoSaida() {
-		return conteudoArquivoSaida;
-	}
-
-	@Override
-	protected String getCaminhoArquivoSaida() {
-		return caminhoArquivoSaida;
-	}
-
-	@Override
-	protected String getFormatoArquivo() {
-		return FORMATO_SAIDA.TXT.getExtensao();
 	}
 
 }

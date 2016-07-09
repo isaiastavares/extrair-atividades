@@ -12,31 +12,31 @@ public abstract class AtividadeWrapperAbstractBase {
 
 	protected static final String nomeArquivo = "AtividadesExtraidas";
 
-	protected abstract void extrairAtividades(String caminhoPDF, String caminhoArquivoSaida);
+	protected abstract String extrairAtividades(String conteudoPDF);
 
-	protected String convertPDFToText() {
-		try {
-			PDFManager pdfManager = new PDFManager();
-			pdfManager.setFilePath(getCaminhoPDF());
-			return pdfManager.toText();
-		} catch (IOException e) {
-			LOG.severe(e.getMessage());
-		}
-		return null;
-	}
+//	protected String convertPDFToText() {
+//		try {
+//			PDFManager pdfManager = new PDFManager();
+//			pdfManager.setFilePath(getCaminhoPDF());
+//			return pdfManager.toText();
+//		} catch (IOException e) {
+//			LOG.severe(e.getMessage());
+//		}
+//		return null;
+//	}
 
-	protected void salvar() {
-		Arquivo.salvarArquivo(getCaminhoArquivoSaida(),
-				nomeArquivo + getFormatoArquivo(),
-				getConteudoArquivoSaida());
-	}
+//	protected void salvar() {
+//		Arquivo.salvarArquivo(getCaminhoArquivoSaida(),
+//				nomeArquivo + getFormatoArquivo(),
+//				getConteudoArquivoSaida());
+//	}
 
-	protected abstract String getCaminhoPDF();
-
-	protected abstract String getConteudoArquivoSaida();
-
-	protected abstract String getCaminhoArquivoSaida();
-
-	protected abstract String getFormatoArquivo();
+//	protected abstract String getCaminhoPDF();
+//
+//	protected abstract String getConteudoArquivoSaida();
+//
+//	protected abstract String getCaminhoArquivoSaida();
+//
+//	protected abstract String getFormatoArquivo();
 
 }

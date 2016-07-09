@@ -35,11 +35,6 @@ public final class Arquivo {
 		if (url == null) {
 			throw new FileNotFoundException("O caminho especificado nao aponta para um arquivo ou diretorio existente relativo a raiz do classpath: " + caminhoRelativo);
 		}
-//		try {
-//			return new File(URLDecoder.decode(resource.getPath(), "UTF-8"));
-//		} catch (UnsupportedEncodingException e) {
-//			log.error("Nao foi possivel decodificar url '" + url.getPath() + "'", e);
-//		}
 		return new File(url.getPath());
 	}
 

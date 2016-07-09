@@ -3,8 +3,10 @@ package br.com.ms;
 import static org.junit.Assert.assertTrue;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.net.URL;
 
+import com.sun.tools.javac.file.Paths;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -14,19 +16,18 @@ import br.com.ms.util.Arquivo;
 
 public class DocumentParseAdapterTest {
 
-	private static final String CAMINHO_SAIDA = "C:\\Users\\Isaias\\Downloads";
-	private static final String CAMINHO_RADOC = "C:\\Users\\Isaias\\Downloads\\Trabalho-3-Exemplos-Radoc\\Radoc-2014-Final.pdf";
-	private static final String ATIVIDADES_EXTRAIDAS = "AtividadesExtraidas.txt";
+    private static final String ATIVIDADES_EXTRAIDAS = "AtividadesExtraidas.txt";
 
-	private DocumentParseAdapter documentParseAdapter;
+    private DocumentParseAdapter documentParseAdapter;
 
-	@Before
-	public void init() {
-		documentParseAdapter = new DocumentParseAdapter();
-	}
-	@Test
-	public void test() {
-//		Arquivo.getArquivoRelativoClasspath(ATIVIDADES_EXTRAIDAS);
+    @Before
+    public void init() {
+        documentParseAdapter = new DocumentParseAdapter();
+    }
+
+    @Test
+    public void testParsearPDF() throws FileNotFoundException {
+        Arquivo.getArquivoRelativoClasspath("");
 
 //		documentParseAdapter.parsearPDF(
 //				TIPO_DOCUMENTO.RADOC,
@@ -35,6 +36,6 @@ public class DocumentParseAdapterTest {
 //				FORMATO_SAIDA.TXT);
 //		File file = new File(ATIVIDADES_EXTRAIDAS);
 //		assertTrue(file.exists());
-	}
+    }
 
 }

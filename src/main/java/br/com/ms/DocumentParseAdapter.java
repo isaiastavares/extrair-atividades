@@ -5,28 +5,24 @@ import java.util.logging.Logger;
 import br.com.ms.atividade.wrapper.AtividadeWrapper;
 import br.com.ms.enums.FORMATO_SAIDA;
 import br.com.ms.enums.TIPO_DOCUMENTO;
+import org.apache.commons.lang.NotImplementedException;
 
 public class DocumentParseAdapter {
 
-	private static final Logger LOG = Logger.getLogger(DocumentParseAdapter.class.getName());
+    private AtividadeWrapper wrapperAtividades;
 
-	private AtividadeWrapper wrapperAtividades;
+    public DocumentParseAdapter() {
+        wrapperAtividades = new AtividadeWrapper();
+    }
 
-	public DocumentParseAdapter() {
-		wrapperAtividades = new AtividadeWrapper();
-	}
+    public String parsearPDF(TIPO_DOCUMENTO tipoDocumento, String conteudoPDF, FORMATO_SAIDA formatoSaida) {
+        switch (tipoDocumento) {
+            case RADOC:
+                return wrapperAtividades.wrapperAtividades(conteudoPDF, formatoSaida);
+            default:
+                throw new NotImplementedException("Tipo de documento n„o implementado: " + tipoDocumento.getNomeDocumento());
+        }
 
-	public void parsearPDF(TIPO_DOCUMENTO tipoDocumento, String caminhoPDF, String caminhoSaida,
-			FORMATO_SAIDA formatoSaida) {
-		switch (tipoDocumento) {
-		case RADOC:
-			wrapperAtividades.wrapperAtividades(caminhoPDF, caminhoSaida, formatoSaida);
-			break;
-		default:
-			LOG.info("Tipo de documento n√£o reconhecido: " + tipoDocumento.getNomeDocumento());
-			break;
-		}
-
-	}
+    }
 
 }
