@@ -1,7 +1,7 @@
 package br.com.ms.atividade.wrapper;
 
 /**
- *	Interface para implementar uma extra&ccedil;&atilde;o de Atividades.
+ *	Interface para implementar uma extra&ccedil;&atilde;o de AtividadeWrapper.
  */
 public interface IAtividadeWrapper {
 

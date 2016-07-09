@@ -1,7 +1,7 @@
 package br.com.ms.enums;
 
 /**
- *	Enum contendo os formatos poss&iacute;veis para Extra&ccedil;&atilde;o das Atividades
+ *	Enum contendo os formatos poss&iacute;veis para Extra&ccedil;&atilde;o das AtividadeWrapper
  */
 public enum FORMATO_SAIDA {
 

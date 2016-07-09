@@ -20,15 +20,15 @@ public class ExtrairAtividades {
                     String textPdf = pdfManager.toText();
                     DocumentParseAdapter documentParseAdapter = new DocumentParseAdapter();
                     String txt = documentParseAdapter.parsearPDF(TIPO_DOCUMENTO.RADOC, textPdf, FORMATO_SAIDA.TXT);
-                    Arquivo.salvarArquivo("", "AtividadesExtraídas.txt", txt);
+                    Arquivo.salvarArquivo("", "AtividadesExtra\u00eddas.txt", txt);
                 } catch (IOException e) {
                     System.err.println("Erro ao abrir o arquivo." + e.getMessage());
                 }
             } else {
-                System.err.println("Arquivo informado não foi encontrado");
+                System.err.println("Arquivo informado n\u00e3o foi encontrado");
             }
         } else {
-            System.err.println("Informe um parâmetro com o nome do arquivo RADOC");
+            System.err.println("Informe um par\u00e2metro com o nome do arquivo RADOC");
         }
     }
 }

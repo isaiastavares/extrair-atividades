@@ -8,21 +8,13 @@ import java.util.regex.Pattern;
 import org.apache.commons.lang.StringUtils;
 
 import br.com.ms.enums.ATIVIDADES;
+import br.com.ms.util.Patterns;
 
 /**
- * Implementa&ccedil;&atilde;o da class {@link IAtividadeWrapper} para arquivos
  * do tipo TXT
  */
 public class AtividadeWrapperTxt implements IAtividadeWrapper {
 
-	private static final String PATTERN_TITULO_TRABALHO = "Título do trabalho: (.*)";
-	private static final String PATTERN_TITULO_PROJETO = "Título do Projeto: (.*)";
-	private static final String PATTERN_DESCRICAO= "Descrição:(.*)";
-	private static final String PATTERN_DESCRICAO_ATIVIDADE = "Descrição da atividade: (.*)";
-	private static final String PATTERN_DESCRICAO_CLIENTELA = "Descrição da clientela: (.*)";
-	private static final String PATTERN_DESCRICAO_COMPLEMENTAR = "Descrição Complementar: (.*)";
-	private static final String PATTERN_TABELA = "Tabela: (.*)";
-	private static final String PATTERN_CHA_DTINI_DTFIM = "CHA: ([0-9]+) Data [a-zA-Z]nício: ([0-9]{2}\\/[0-9]{2}\\/[0-9]{4}) Data [a-zA-Z]érmino: ([0-9]{2}\\/[0-9]{2}\\/[0-9]{4}) *";
 
 	private static final String QUEBRA_DE_LINHA = "\n";
 	private int sequencialAtividade = 0;
@@ -112,7 +104,7 @@ public class AtividadeWrapperTxt implements IAtividadeWrapper {
 		String[] linhas = atividade.split(QUEBRA_DE_LINHA);
 
 		for (String linha : linhas) {
-			Pattern patternTituloTrabalho = Pattern.compile(PATTERN_TITULO_TRABALHO);
+			Pattern patternTituloTrabalho = Pattern.compile(Patterns.PATTERN_TITULO_TRABALHO);
 			Matcher matcherTituloTrabalho = patternTituloTrabalho.matcher(linha);
 			if (matcherTituloTrabalho.find()) {
 				sb.append(getSequencialAtividade());
@@ -121,7 +113,7 @@ public class AtividadeWrapperTxt implements IAtividadeWrapper {
 				sb.append(QUEBRA_DE_LINHA);
 			}
 
-			Pattern patternChaDtIniDtFim = Pattern.compile(PATTERN_CHA_DTINI_DTFIM);
+			Pattern patternChaDtIniDtFim = Pattern.compile(Patterns.PATTERN_CHA_DTINI_DTFIM);
 			Matcher matcherChaDtIniDtFim = patternChaDtIniDtFim.matcher(linha);
 			if (matcherChaDtIniDtFim.find()) {
 				sb.append("qtdeHorasAtividade: ");
@@ -148,7 +140,7 @@ public class AtividadeWrapperTxt implements IAtividadeWrapper {
 		String[] linhas = atividade.split(QUEBRA_DE_LINHA);
 
 		for (String linha : linhas) {
-			Pattern patternTituloProjeto = Pattern.compile(PATTERN_TITULO_PROJETO);
+			Pattern patternTituloProjeto = Pattern.compile(Patterns.PATTERN_TITULO_PROJETO);
 			Matcher matcherTituloProjeto = patternTituloProjeto.matcher(linha);
 			if (matcherTituloProjeto.find()) {
 				sb.append(getSequencialAtividade());
@@ -157,7 +149,7 @@ public class AtividadeWrapperTxt implements IAtividadeWrapper {
 				sb.append(QUEBRA_DE_LINHA);
 			}
 
-			Pattern patternChaDtIniDtFim = Pattern.compile(PATTERN_CHA_DTINI_DTFIM);
+			Pattern patternChaDtIniDtFim = Pattern.compile(Patterns.PATTERN_CHA_DTINI_DTFIM);
 			Matcher matcherChaDtIniDtFim = patternChaDtIniDtFim.matcher(linha);
 			if (matcherChaDtIniDtFim.find()) {
 				sb.append("qtdeHorasAtividade: ");
@@ -189,12 +181,12 @@ public class AtividadeWrapperTxt implements IAtividadeWrapper {
 		String dtInicioAtividade = "";
 		String dtFimAtividade = "";
 		for (String linha : linhas) {
-			Pattern patternDescricaoAtividade = Pattern.compile(PATTERN_DESCRICAO_ATIVIDADE);
+			Pattern patternDescricaoAtividade = Pattern.compile(Patterns.PATTERN_DESCRICAO_ATIVIDADE);
 			Matcher matcherDescricaoAtividade = patternDescricaoAtividade.matcher(linha);
 			if (matcherDescricaoAtividade.find()) {
 				descricaoAtividade = matcherDescricaoAtividade.group(1);
 			}
-			Pattern patternDescricaoClientela = Pattern.compile(PATTERN_DESCRICAO_CLIENTELA);
+			Pattern patternDescricaoClientela = Pattern.compile(Patterns.PATTERN_DESCRICAO_CLIENTELA);
 			Matcher matcherDescricaoClientela = patternDescricaoClientela.matcher(linha);
 			if (matcherDescricaoClientela.find()) {
 				descricaoClientela = matcherDescricaoClientela.group(1);
@@ -215,7 +207,7 @@ public class AtividadeWrapperTxt implements IAtividadeWrapper {
 				sb.append(QUEBRA_DE_LINHA);
 			}
 
-			Pattern patternChaDtIniDtFim = Pattern.compile(PATTERN_CHA_DTINI_DTFIM);
+			Pattern patternChaDtIniDtFim = Pattern.compile(Patterns.PATTERN_CHA_DTINI_DTFIM);
 			Matcher matcherChaDtIniDtFim = patternChaDtIniDtFim.matcher(linha);
 			if (matcherChaDtIniDtFim.find()) {
 				qtdeHorasAtividade = matcherChaDtIniDtFim.group(1);
@@ -236,7 +228,7 @@ public class AtividadeWrapperTxt implements IAtividadeWrapper {
 		String[] linhas = atividade.split(QUEBRA_DE_LINHA);
 
 		for (String linha : linhas) {
-			Pattern patternDescricao = Pattern.compile(PATTERN_DESCRICAO);
+			Pattern patternDescricao = Pattern.compile(Patterns.PATTERN_DESCRICAO);
 			Matcher matcherDescricao = patternDescricao.matcher(linha);
 			if (matcherDescricao.find()) {
 				sb.append(getSequencialAtividade());
@@ -245,7 +237,7 @@ public class AtividadeWrapperTxt implements IAtividadeWrapper {
 				sb.append(QUEBRA_DE_LINHA);
 			}
 
-			Pattern patternChaDtIniDtFim = Pattern.compile(PATTERN_CHA_DTINI_DTFIM);
+			Pattern patternChaDtIniDtFim = Pattern.compile(Patterns.PATTERN_CHA_DTINI_DTFIM);
 			Matcher matcherChaDtIniDtFim = patternChaDtIniDtFim.matcher(linha.replace("de ", ""));
 			if (matcherChaDtIniDtFim.find()) {
 				sb.append("qtdeHorasAtividade: ");
@@ -275,7 +267,7 @@ public class AtividadeWrapperTxt implements IAtividadeWrapper {
 		String dtInicioAtividade = "";
 		String dtFimAtividade = "";
 		for (String linha : linhas) {
-			Pattern patternDescricaoComplementar = Pattern.compile(PATTERN_DESCRICAO_COMPLEMENTAR);
+			Pattern patternDescricaoComplementar = Pattern.compile(Patterns.PATTERN_DESCRICAO_COMPLEMENTAR);
 			Matcher matcherDescricaoComplementar = patternDescricaoComplementar.matcher(linha);
 			if (matcherDescricaoComplementar.find()) {
 				sb.append(getSequencialAtividade());
@@ -293,7 +285,7 @@ public class AtividadeWrapperTxt implements IAtividadeWrapper {
 				sb.append(QUEBRA_DE_LINHA);
 			}
 
-			Pattern patternChaDtIniDtFim = Pattern.compile(PATTERN_CHA_DTINI_DTFIM);
+			Pattern patternChaDtIniDtFim = Pattern.compile(Patterns.PATTERN_CHA_DTINI_DTFIM);
 			Matcher matcherChaDtIniDtFim = patternChaDtIniDtFim.matcher(linha);
 			if (matcherChaDtIniDtFim.find()) {
 				qtdeHorasAtividade = matcherChaDtIniDtFim.group(1);
@@ -317,12 +309,12 @@ public class AtividadeWrapperTxt implements IAtividadeWrapper {
 
 		String tabela = "";
 		for (String linha : list) {
-			Pattern patternTabela = Pattern.compile(PATTERN_TABELA);
+			Pattern patternTabela = Pattern.compile(Patterns.PATTERN_TABELA);
 			Matcher matcherTabela = patternTabela.matcher(linha);
 			if (matcherTabela.find()) {
 				tabela = matcherTabela.group(1);
 			}
-			Pattern patternDescricao = Pattern.compile(PATTERN_DESCRICAO);
+			Pattern patternDescricao = Pattern.compile(Patterns.PATTERN_DESCRICAO);
 			Matcher matcherDescricao = patternDescricao.matcher(linha);
 			if (matcherDescricao.find()) {
 				sb.append(getSequencialAtividade());
@@ -336,7 +328,7 @@ public class AtividadeWrapperTxt implements IAtividadeWrapper {
 					subListBuilder.append(string + QUEBRA_DE_LINHA);
 				}
 				String descricaoCustomizada = "";
-				Pattern patternDescricaoCustomizada = Pattern.compile("(Descrição:.*\n)(.*)(\r\n)(.*)(\nÓrgão emissor.*)");
+				Pattern patternDescricaoCustomizada = Pattern.compile(Patterns.PATTERN_DESCRICAO_CUSTOMIZADA);
 				Matcher matcher = patternDescricaoCustomizada.matcher(subListBuilder.toString());
 				if (matcher.find()) {
 					descricaoCustomizada = matcher.group(2) + matcher.group(4);
@@ -345,7 +337,7 @@ public class AtividadeWrapperTxt implements IAtividadeWrapper {
 				sb.append(QUEBRA_DE_LINHA);
 			}
 
-			Pattern patternChaDtIniDtFim = Pattern.compile(PATTERN_CHA_DTINI_DTFIM);
+			Pattern patternChaDtIniDtFim = Pattern.compile(Patterns.PATTERN_CHA_DTINI_DTFIM);
 			Matcher matcherChaDtIniDtFim = patternChaDtIniDtFim.matcher(linha.replace("de ", ""));
 			if (matcherChaDtIniDtFim.find()) {
 				sb.append("qtdeHorasAtividade: ");

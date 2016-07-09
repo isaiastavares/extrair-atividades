@@ -24,7 +24,7 @@ public class PDFManager {
 	private File file;
 
 	/**
-	 * Construtor padrao
+	 * Construtor padr&atilde;o
 	 */
 	public PDFManager() {
 		super();
@@ -32,7 +32,7 @@ public class PDFManager {
 
 	/**
 	 * Converte o PDF em texto
-	 * @return retorna o conteudo do PDF em String
+	 * @return retorna o conte&uacute;do do PDF em String
 	 * @throws IOException
 	 */
 	public String toText() throws IOException {
