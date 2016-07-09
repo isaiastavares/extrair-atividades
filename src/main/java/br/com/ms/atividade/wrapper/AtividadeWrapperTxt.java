@@ -96,7 +96,7 @@ public class AtividadeWrapperTxt extends AtividadeWrapperAbstractBase {
 		atividadesExtraidas.append(extrairAtividadesOrientacao(atividadesOrientacao.toString()));
 		atividadesExtraidas.append(extrairAtividadesProjetos(atividadesProjeto.toString()));
 		atividadesExtraidas.append(extrairAtividadesExtensao(atividadesExtensao.toString()));
-//		atividadesExtraidas.append(extrairAtividadesQualificacao(atividadesQualificacao.toString()));
+		atividadesExtraidas.append(extrairAtividadesQualificacao(atividadesQualificacao.toString()));
 		atividadesExtraidas.append(extrairAtividadesAcademicas(atividadesAcademicas.toString()));
 //		atividadesExtraidas.append(extrairAtividadesOrientacao(atividadesAdministrativas.toString()));
 
@@ -228,7 +228,7 @@ public class AtividadeWrapperTxt extends AtividadeWrapperAbstractBase {
 			}
 
 			Pattern patternChaDtIniDtFim = Pattern.compile(PATTERN_CHA_DTINI_DTFIM);
-			Matcher matcherChaDtIniDtFim = patternChaDtIniDtFim.matcher(linha);
+			Matcher matcherChaDtIniDtFim = patternChaDtIniDtFim.matcher(linha.replace("de ", ""));
 			if (matcherChaDtIniDtFim.find()) {
 				sb.append("qtdeHorasAtividade: ");
 				sb.append(matcherChaDtIniDtFim.group(1));
