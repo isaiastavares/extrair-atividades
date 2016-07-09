@@ -11,10 +11,10 @@ import br.com.ms.enums.ATIVIDADES;
 import br.com.ms.util.Patterns;
 
 /**
+ * Implementa&ccedil;&atilde;o da classe {@link IAtividadeWrapper} para arquivos
  * do tipo TXT
  */
 public class AtividadeWrapperTxt implements IAtividadeWrapper {
-
 
 	private static final String QUEBRA_DE_LINHA = "\n";
 	private int sequencialAtividade = 0;
