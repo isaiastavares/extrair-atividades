@@ -24,7 +24,7 @@ public class ExtrairAtividades {
                         String textPdf = pdfManager.toText();
                         DocumentParseAdapter documentParseAdapter = new DocumentParseAdapter();
                         String txt = documentParseAdapter.parsearPDF(TIPO_DOCUMENTO.RADOC, textPdf, FORMATO_SAIDA.TXT);
-                        Arquivo.salvarArquivo(pastaResultado.getAbsolutePath(), "AtividadesExtra\u00eddas.txt", txt);
+                        Arquivo.salvarArquivo(caminhoResultado, "AtividadesExtra\u00eddas.txt", txt);
                     } catch (IOException e) {
                         System.err.println("Erro ao abrir o arquivo." + e.getMessage());
                     } catch (Exception e) {
