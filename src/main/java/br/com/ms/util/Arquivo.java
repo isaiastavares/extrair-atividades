@@ -7,15 +7,27 @@ import java.nio.charset.Charset;
 import java.util.Formatter;
 import java.util.logging.Logger;
 
+/**
+ * Classe utilit&aacute;ria para trabalhar com Arquivo.
+ */
 public final class Arquivo {
 
 	private static final Class<Arquivo> LOADER_CLASS = Arquivo.class;
 	private static final Logger LOG = Logger.getLogger(LOADER_CLASS.getName());
 
+	/**
+	 * Construtor padrao
+	 */
 	private Arquivo() {
 		super();
 	}
 
+	/**
+	 * Salva o arquivo passando o caminho, nome do arquivo e o conteudo
+	 * @param caminho caminho onde deseja salvar o arquivo
+	 * @param nomeArquivo nome do arquivo que deseja salvar
+	 * @param conteudo conteudo do arquivo
+	 */
 	public static void salvarArquivo(String caminho, String nomeArquivo, String conteudo) {
 		File file = new File(caminho, nomeArquivo);
 		try {
@@ -30,6 +42,12 @@ public final class Arquivo {
 		}
 	}
 
+	/**
+	 * Obt&eacute;m o arquivo do caminho relativo
+	 * @param caminhoRelativo nome do arquivo
+	 * @return o arquivo como File
+	 * @throws FileNotFoundException exce&ccedil;&atilde;o lan&ccedil;ada caso n&atilde;o encontre o arquivo
+	 */
 	public static File getArquivoRelativoClasspath(String caminhoRelativo) throws FileNotFoundException {
 		URL url = LOADER_CLASS.getResource(garantirBarraInicio(caminhoRelativo));
 		if (url == null) {

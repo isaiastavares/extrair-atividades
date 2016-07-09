@@ -2,16 +2,18 @@ package br.com.ms.atividade.wrapper;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.regex.MatchResult;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.apache.commons.lang.StringUtils;
 
 import br.com.ms.enums.ATIVIDADES;
-import br.com.ms.enums.FORMATO_SAIDA;
 
-public class AtividadeWrapperTxt extends AtividadeWrapperAbstractBase {
+/**
+ * Implementa&ccedil;&atilde;o da class {@link IAtividadeWrapper} para arquivos
+ * do tipo TXT
+ */
+public class AtividadeWrapperTxt implements IAtividadeWrapper {
 
 	private static final String PATTERN_TITULO_TRABALHO = "Título do trabalho: (.*)";
 	private static final String PATTERN_TITULO_PROJETO = "Título do Projeto: (.*)";
@@ -32,8 +34,7 @@ public class AtividadeWrapperTxt extends AtividadeWrapperAbstractBase {
 	private StringBuilder atividadesAcademicas;
 	private StringBuilder atividadesAdministrativas;
 
-	@Override
-	protected String extrairAtividades(String conteudoPDF) {
+	public String extrairAtividades(String conteudoPDF) {
 
 		String[] linha = conteudoPDF.split(QUEBRA_DE_LINHA);
 
@@ -101,6 +102,11 @@ public class AtividadeWrapperTxt extends AtividadeWrapperAbstractBase {
 		return atividadesExtraidas.toString();
 	}
 
+	/**
+	 * Extrai as atividades de Orienta&ccedil;&atilde;o
+	 * @param atividade string contendo o grupo de atividades de orienta&ccedil;&atilde;o
+	 * @return string contendo as atividades de orienta&ccedil;&atilde;o
+	 */
 	private String extrairAtividadesOrientacao(String atividade) {
 		StringBuilder sb = new StringBuilder();
 		String[] linhas = atividade.split(QUEBRA_DE_LINHA);
@@ -132,6 +138,11 @@ public class AtividadeWrapperTxt extends AtividadeWrapperAbstractBase {
 		return sb.toString();
 	}
 
+	/**
+	 * Extrai as atividades de Projetos
+	 * @param atividade string contendo o grupo de atividades de projetos
+	 * @return string contendo as atividades de projetos
+	 */
 	private String extrairAtividadesProjetos(String atividade) {
 		StringBuilder sb = new StringBuilder();
 		String[] linhas = atividade.split(QUEBRA_DE_LINHA);
@@ -163,6 +174,11 @@ public class AtividadeWrapperTxt extends AtividadeWrapperAbstractBase {
 		return sb.toString();
 	}
 
+	/**
+	 * Extrai as atividades de Extens&atilde;o
+	 * @param atividade string contendo o grupo de atividades de Extens&atilde;o
+	 * @return string contendo as atividades de Extens&atilde;o
+	 */
 	private String extrairAtividadesExtensao(String atividade) {
 		StringBuilder sb = new StringBuilder();
 		String[] linhas = atividade.split(QUEBRA_DE_LINHA);
@@ -210,6 +226,11 @@ public class AtividadeWrapperTxt extends AtividadeWrapperAbstractBase {
 		return sb.toString();
 	}
 
+	/**
+	 * Extrai as atividades de Qualifica&ccedil;&atilde;o
+	 * @param atividade string contendo o grupo de atividades de Qualifica&ccedil;&atilde;o
+	 * @return string contendo as atividades de Qualifica&ccedil;&atilde;o
+	 */
 	private String extrairAtividadesQualificacao(String atividade) {
 		StringBuilder sb = new StringBuilder();
 		String[] linhas = atividade.split(QUEBRA_DE_LINHA);
@@ -241,6 +262,11 @@ public class AtividadeWrapperTxt extends AtividadeWrapperAbstractBase {
 		return sb.toString();
 	}
 
+	/**
+	 * Extrai as atividades Acad&ecirc;micas
+	 * @param atividade string contendo o grupo de atividades Acad&ecirc;micas
+	 * @return string contendo as atividades Acad&ecirc;micas
+	 */
 	private String extrairAtividadesAcademicas(String atividade) {
 		StringBuilder sb = new StringBuilder();
 		String[] linhas = atividade.split(QUEBRA_DE_LINHA);
@@ -278,18 +304,16 @@ public class AtividadeWrapperTxt extends AtividadeWrapperAbstractBase {
 		return sb.toString();
 	}
 
+	/**
+	 * Extrai as atividades Administrativas
+	 * @param atividade string contendo o grupo de atividades Administrativas
+	 * @return string contendo as atividades Administrativas
+	 */
 	private String extrairAtividadesAdministrativas(String atividade) {
 		StringBuilder sb = new StringBuilder();
 
 		String[] linhas = atividade.split(QUEBRA_DE_LINHA);
 		List<String> list = Arrays.asList(linhas);
-
-//		String descricaoCustomizada = "";
-//		Pattern patternDescricaoCustomizada = Pattern.compile("(.*Descrição:\\s+)(.*)(\\s+Órgão emissor.*)");
-//		Matcher matcher = patternDescricaoCustomizada.matcher(atividade);
-//		if (matcher.find()) {
-//			descricaoCustomizada = matcher.group(2);
-//		}
 
 		String tabela = "";
 		for (String linha : list) {

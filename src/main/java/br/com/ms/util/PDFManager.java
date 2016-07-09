@@ -9,6 +9,9 @@ import org.apache.pdfbox.pdfparser.PDFParser;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
 
+/**
+ * Classe utilit&aacute;ria para trabalhar com PDF
+ */
 public class PDFManager {
 
 	private PDFParser parser;
@@ -20,10 +23,18 @@ public class PDFManager {
 	private String filePath;
 	private File file;
 
+	/**
+	 * Construtor padrao
+	 */
 	public PDFManager() {
 		super();
 	}
 
+	/**
+	 * Converte o PDF em texto
+	 * @return retorna o conteudo do PDF em String
+	 * @throws IOException
+	 */
 	public String toText() throws IOException {
 		this.pdfStripper = null;
 		this.pdDoc = null;
@@ -50,6 +61,10 @@ public class PDFManager {
 		}
 	}
 
+	/**
+	 * Seta o caminho do PDF
+	 * @param filePath caminho onde se encontra o PDF
+	 */
 	public void setFilePath(String filePath) {
 		this.filePath = filePath;
 	}

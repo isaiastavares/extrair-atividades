@@ -1,5 +1,9 @@
 package br.com.ms.enums;
 
+/**
+ * Enum contendo as atividades que precisam ser extra&iacute;das
+ * do RADOC.
+ */
 public enum ATIVIDADES {
 
 	ATIVIDADES_ORIENTACAO(1, "Atividades de orientação"),
@@ -17,6 +21,11 @@ public enum ATIVIDADES {
 		this.nomeAtividade = nomeAtividade;
 	}
 
+	/**
+	 * Retorna {@link ATIVIDADES} pela ordem
+	 * @param ordem ordem da atividade
+	 * @return {@link ATIVIDADES}
+	 */
 	public static ATIVIDADES atividadesFromOrdem(int ordem) {
 		ATIVIDADES[] atividades = ATIVIDADES.values();
 		for (int i = 0; i < atividades.length; i++) {
@@ -27,10 +36,18 @@ public enum ATIVIDADES {
 		return null;
 	}
 
+	/**
+	 * Retorna o nome da atividade
+	 * @return o nome da atividade
+	 */
 	public String getNomeAtividade() {
 		return nomeAtividade;
 	}
 
+	/**
+	 * Retorna a ordem da atividade no RADOC.
+	 * @return a ordem da atividade no RADOC.
+	 */
 	public int getOrdem() {
 		return ordem;
 	}
