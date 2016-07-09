@@ -98,7 +98,7 @@ public class AtividadeWrapperTxt extends AtividadeWrapperAbstractBase {
 		atividadesExtraidas.append(extrairAtividadesExtensao(atividadesExtensao.toString()));
 		atividadesExtraidas.append(extrairAtividadesQualificacao(atividadesQualificacao.toString()));
 		atividadesExtraidas.append(extrairAtividadesAcademicas(atividadesAcademicas.toString()));
-//		atividadesExtraidas.append(extrairAtividadesOrientacao(atividadesAdministrativas.toString()));
+		atividadesExtraidas.append(extrairAtividadesAdministrativas(atividadesAdministrativas.toString()));
 
 		this.conteudoArquivoSaida = atividadesExtraidas.toString();
 		salvar();
@@ -276,6 +276,45 @@ public class AtividadeWrapperTxt extends AtividadeWrapperAbstractBase {
 				qtdeHorasAtividade = matcherChaDtIniDtFim.group(1);
 				dtInicioAtividade = matcherChaDtIniDtFim.group(2);
 				dtFimAtividade = matcherChaDtIniDtFim.group(3);
+			}
+		}
+		return sb.toString();
+	}
+
+	private String extrairAtividadesAdministrativas(String atividade) {
+		StringBuilder sb = new StringBuilder();
+		String[] linhas = atividade.split(QUEBRA_DE_LINHA);
+
+		String tabela = "";
+		for (String linha : linhas) {
+			Pattern patternTabela = Pattern.compile(PATTERN_TABELA);
+			Matcher matcherTabela = patternTabela.matcher(linha);
+			if (matcherTabela.find()) {
+				tabela = matcherTabela.group(1);
+			}
+			Pattern patternDescricao = Pattern.compile(PATTERN_DESCRICAO);
+			Matcher matcherDescricao = patternDescricao.matcher(linha);
+			if (matcherDescricao.find()) {
+				sb.append(getSequencialAtividade());
+				sb.append("descricaoAtividade: ");
+				sb.append(tabela);
+				sb.append(" - ");
+				sb.append(matcherDescricao.group(1));
+				sb.append(QUEBRA_DE_LINHA);
+			}
+
+			Pattern patternChaDtIniDtFim = Pattern.compile(PATTERN_CHA_DTINI_DTFIM);
+			Matcher matcherChaDtIniDtFim = patternChaDtIniDtFim.matcher(linha.replace("de ", ""));
+			if (matcherChaDtIniDtFim.find()) {
+				sb.append("qtdeHorasAtividade: ");
+				sb.append(matcherChaDtIniDtFim.group(1));
+				sb.append(QUEBRA_DE_LINHA);
+				sb.append("dtInicioAtividade: ");
+				sb.append(matcherChaDtIniDtFim.group(2));
+				sb.append(QUEBRA_DE_LINHA);
+				sb.append("dtFimAtividade: ");
+				sb.append(matcherChaDtIniDtFim.group(3));
+				sb.append(QUEBRA_DE_LINHA);
 			}
 		}
 		return sb.toString();

@@ -17,4 +17,13 @@ public class ExtrairAtividades {
 				FORMATO_SAIDA.TXT);
 	}
 
+//	public static void main(String[] args) {
+//		try {
+//			File file = Arquivo.getArquivoRelativoClasspath("Radoc-2015-Final.pdf");
+//			System.out.println(file.getAbsolutePath());
+//		} catch (FileNotFoundException e) {
+//			e.printStackTrace();
+//		}
+//	}
+
 }
