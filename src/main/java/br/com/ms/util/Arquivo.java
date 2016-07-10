@@ -41,6 +41,7 @@ public final class Arquivo {
 			Formatter saida = new Formatter(file);
 			Charset.forName("UTF-8").encode(conteudo);
 			saida.format(conteudo);
+            saida.flush();
 			saida.close();
 			LOG.info("Arquivo salvo com sucesso no caminho: " + file.getAbsolutePath());
 		} catch (FileNotFoundException e) {
