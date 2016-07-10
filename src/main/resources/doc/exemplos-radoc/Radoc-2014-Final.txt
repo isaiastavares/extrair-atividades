@@ -24,7 +24,7 @@ SOFTWARE
 64 2014 2 A 44 0 32 32 90 NÃO
 ENGENHARIA DE SOFTWARE INTEGRAÇÃO 2 64 2014 2 A 38 0 0 64 90 NÃO
 SISTEMAS DE INFORMAÇÃO PROJETO FINAL DE CURSO 1 32 2014 2 C 3 0 32 0 0 SIM
-LEGENDA: CHA - Carga horária da atividade | Sem - Semestre | Sub - Subturma | CHT, CHP e CHAC - Carga horária teórica, prática e acessória | Conjug - Disciplina conjugada
+LEGENDA: CHA - Carga horária da atividade | Sem - Semestre | Sub - Subturma | CHT, CHP e CHAC - Carga horária teórica, prática e acessória | Conjug - Disciplina conjugada 
 Data: 28/05/2015 23:27:40                                                  JULIANO LOPES DE OLIVEIRA Página  1 / 11
 UNIVERSIDADE FEDERAL DE GOIÁS
 SISTEMA DE CADASTRO DE ATIVIDADES DOCENTES
@@ -132,7 +132,7 @@ Descrição: MEMBRO DO NÚCLEO DOCENTE ESTRUTURANTE - N.D.E. - ENGENHARIA DE SOF
 Portaria 19 CHA: 100 Data início: 01/01/2014 Data término: 31/12/2014
 Tabela: Membros da CPPD ou da Comissão de Avaliação Institucional ou da Comissão Própria de Avaliação ou da CAD
 Descrição:
-PRESIDENTE DA COMISSÃO DE AVALIAÇÃO DOCENTE - CAD - PARA TRATAR PRIORITARIAMENTE
+PRESIDENTE DA COMISSÃO DE AVALIAÇÃO DOCENTE - CAD - PARA TRATAR PRIORITARIAMENTE 
 DOS PROCESSOS DE PROMOÇÃO À CLASSE D
 Órgão emissor INF Órgão servido INF
 Portaria 005 CHA: 100 Data início: 01/01/2014 Data término: 31/12/2014

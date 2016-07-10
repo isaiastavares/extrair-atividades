@@ -17,6 +17,12 @@ import br.com.ms.util.Patterns;
 public class AtividadeWrapperTxt implements IAtividadeWrapper {
 
 	private static final String QUEBRA_DE_LINHA = "\n";
+	private static final String SEQUENCIAL_ATIVIDADE = "sequencialAtividade: ";
+	private static final String DESCRICAO_ATIVIDADE = "descricaoAtividade: ";
+	private static final String QTDE_HORAS_ATIVIDADE = "qtdeHorasAtividade: ";
+	private static final String DT_INICIO_ATIVIDADE = "dtInicioAtividade: ";
+	private static final String DT_FIM_ATIVIDADE = "dtFimAtividade: ";
+	private static final String SEPARADOR = " - ";
 	private int sequencialAtividade = 0;
 
 	private StringBuilder atividadesOrientacao;
@@ -99,33 +105,23 @@ public class AtividadeWrapperTxt implements IAtividadeWrapper {
 	 * @param atividade string contendo o grupo de atividades de orienta&ccedil;&atilde;o
 	 * @return string contendo as atividades de orienta&ccedil;&atilde;o
 	 */
-	private String extrairAtividadesOrientacao(String atividade) {
+	protected String extrairAtividadesOrientacao(String atividade) {
 		StringBuilder sb = new StringBuilder();
 		String[] linhas = atividade.split(QUEBRA_DE_LINHA);
+
+		sb.append(getTituloAtividade(ATIVIDADES.ATIVIDADES_ORIENTACAO.getNomeAtividade()));
 
 		for (String linha : linhas) {
 			Pattern patternTituloTrabalho = Pattern.compile(Patterns.PATTERN_TITULO_TRABALHO);
 			Matcher matcherTituloTrabalho = patternTituloTrabalho.matcher(linha);
 			if (matcherTituloTrabalho.find()) {
 				sb.append(getSequencialAtividade());
-				sb.append("descricaoAtividade: ");
+				sb.append(DESCRICAO_ATIVIDADE);
 				sb.append(matcherTituloTrabalho.group(1));
 				sb.append(QUEBRA_DE_LINHA);
 			}
 
-			Pattern patternChaDtIniDtFim = Pattern.compile(Patterns.PATTERN_CHA_DTINI_DTFIM);
-			Matcher matcherChaDtIniDtFim = patternChaDtIniDtFim.matcher(linha);
-			if (matcherChaDtIniDtFim.find()) {
-				sb.append("qtdeHorasAtividade: ");
-				sb.append(matcherChaDtIniDtFim.group(1));
-				sb.append(QUEBRA_DE_LINHA);
-				sb.append("dtInicioAtividade: ");
-				sb.append(matcherChaDtIniDtFim.group(2));
-				sb.append(QUEBRA_DE_LINHA);
-				sb.append("dtFimAtividade: ");
-				sb.append(matcherChaDtIniDtFim.group(3));
-				sb.append(QUEBRA_DE_LINHA);
-			}
+			sb.append(getChaDtInicioDtFim(linha));
 		}
 		return sb.toString();
 	}
@@ -135,33 +131,23 @@ public class AtividadeWrapperTxt implements IAtividadeWrapper {
 	 * @param atividade string contendo o grupo de atividades de projetos
 	 * @return string contendo as atividades de projetos
 	 */
-	private String extrairAtividadesProjetos(String atividade) {
+	protected String extrairAtividadesProjetos(String atividade) {
 		StringBuilder sb = new StringBuilder();
 		String[] linhas = atividade.split(QUEBRA_DE_LINHA);
+
+		sb.append(getTituloAtividade(ATIVIDADES.ATIVIDADES_PROJETOS.getNomeAtividade()));
 
 		for (String linha : linhas) {
 			Pattern patternTituloProjeto = Pattern.compile(Patterns.PATTERN_TITULO_PROJETO);
 			Matcher matcherTituloProjeto = patternTituloProjeto.matcher(linha);
 			if (matcherTituloProjeto.find()) {
 				sb.append(getSequencialAtividade());
-				sb.append("descricaoAtividade: ");
+				sb.append(DESCRICAO_ATIVIDADE);
 				sb.append(matcherTituloProjeto.group(1));
 				sb.append(QUEBRA_DE_LINHA);
 			}
 
-			Pattern patternChaDtIniDtFim = Pattern.compile(Patterns.PATTERN_CHA_DTINI_DTFIM);
-			Matcher matcherChaDtIniDtFim = patternChaDtIniDtFim.matcher(linha);
-			if (matcherChaDtIniDtFim.find()) {
-				sb.append("qtdeHorasAtividade: ");
-				sb.append(matcherChaDtIniDtFim.group(1));
-				sb.append(QUEBRA_DE_LINHA);
-				sb.append("dtInicioAtividade: ");
-				sb.append(matcherChaDtIniDtFim.group(2));
-				sb.append(QUEBRA_DE_LINHA);
-				sb.append("dtFimAtividade: ");
-				sb.append(matcherChaDtIniDtFim.group(3));
-				sb.append(QUEBRA_DE_LINHA);
-			}
+			sb.append(getChaDtInicioDtFim(linha));
 		}
 		return sb.toString();
 	}
@@ -171,9 +157,11 @@ public class AtividadeWrapperTxt implements IAtividadeWrapper {
 	 * @param atividade string contendo o grupo de atividades de Extens&atilde;o
 	 * @return string contendo as atividades de Extens&atilde;o
 	 */
-	private String extrairAtividadesExtensao(String atividade) {
+	protected String extrairAtividadesExtensao(String atividade) {
 		StringBuilder sb = new StringBuilder();
 		String[] linhas = atividade.split(QUEBRA_DE_LINHA);
+
+		sb.append(getTituloAtividade(ATIVIDADES.ATIVIDADES_EXTENSAO.getNomeAtividade()));
 
 		String descricaoAtividade = "";
 		String descricaoClientela = "";
@@ -191,19 +179,20 @@ public class AtividadeWrapperTxt implements IAtividadeWrapper {
 			if (matcherDescricaoClientela.find()) {
 				descricaoClientela = matcherDescricaoClientela.group(1);
 				sb.append(getSequencialAtividade());
-				sb.append("descricaoAtividade: ");
+				sb.append(DESCRICAO_ATIVIDADE);
 				sb.append(descricaoAtividade);
-				sb.append(" - ");
+				sb.append(SEPARADOR);
 				sb.append(descricaoClientela);
 				sb.append(QUEBRA_DE_LINHA);
-				sb.append("qtdeHorasAtividade: ");
+				sb.append(QTDE_HORAS_ATIVIDADE);
 				sb.append(qtdeHorasAtividade);
 				sb.append(QUEBRA_DE_LINHA);
-				sb.append("dtInicioAtividade: ");
+				sb.append(DT_INICIO_ATIVIDADE);
 				sb.append(dtInicioAtividade);
 				sb.append(QUEBRA_DE_LINHA);
-				sb.append("dtFimAtividade: ");
+				sb.append(DT_FIM_ATIVIDADE);
 				sb.append(dtFimAtividade);
+				sb.append(QUEBRA_DE_LINHA);
 				sb.append(QUEBRA_DE_LINHA);
 			}
 
@@ -223,16 +212,18 @@ public class AtividadeWrapperTxt implements IAtividadeWrapper {
 	 * @param atividade string contendo o grupo de atividades de Qualifica&ccedil;&atilde;o
 	 * @return string contendo as atividades de Qualifica&ccedil;&atilde;o
 	 */
-	private String extrairAtividadesQualificacao(String atividade) {
+	protected String extrairAtividadesQualificacao(String atividade) {
 		StringBuilder sb = new StringBuilder();
 		String[] linhas = atividade.split(QUEBRA_DE_LINHA);
+
+		sb.append(getTituloAtividade(ATIVIDADES.ATIVIDADES_QUALIFICACAO.getNomeAtividade()));
 
 		for (String linha : linhas) {
 			Pattern patternDescricao = Pattern.compile(Patterns.PATTERN_DESCRICAO);
 			Matcher matcherDescricao = patternDescricao.matcher(linha);
 			if (matcherDescricao.find()) {
 				sb.append(getSequencialAtividade());
-				sb.append("descricaoAtividade: ");
+				sb.append(DESCRICAO_ATIVIDADE);
 				sb.append(matcherDescricao.group(1));
 				sb.append(QUEBRA_DE_LINHA);
 			}
@@ -240,13 +231,13 @@ public class AtividadeWrapperTxt implements IAtividadeWrapper {
 			Pattern patternChaDtIniDtFim = Pattern.compile(Patterns.PATTERN_CHA_DTINI_DTFIM);
 			Matcher matcherChaDtIniDtFim = patternChaDtIniDtFim.matcher(linha.replace("de ", ""));
 			if (matcherChaDtIniDtFim.find()) {
-				sb.append("qtdeHorasAtividade: ");
+				sb.append(QTDE_HORAS_ATIVIDADE);
 				sb.append(matcherChaDtIniDtFim.group(1));
 				sb.append(QUEBRA_DE_LINHA);
-				sb.append("dtInicioAtividade: ");
+				sb.append(DT_INICIO_ATIVIDADE);
 				sb.append(matcherChaDtIniDtFim.group(2));
 				sb.append(QUEBRA_DE_LINHA);
-				sb.append("dtFimAtividade: ");
+				sb.append(DT_FIM_ATIVIDADE);
 				sb.append(matcherChaDtIniDtFim.group(3));
 				sb.append(QUEBRA_DE_LINHA);
 			}
@@ -259,9 +250,11 @@ public class AtividadeWrapperTxt implements IAtividadeWrapper {
 	 * @param atividade string contendo o grupo de atividades Acad&ecirc;micas
 	 * @return string contendo as atividades Acad&ecirc;micas
 	 */
-	private String extrairAtividadesAcademicas(String atividade) {
+	protected String extrairAtividadesAcademicas(String atividade) {
 		StringBuilder sb = new StringBuilder();
 		String[] linhas = atividade.split(QUEBRA_DE_LINHA);
+
+		sb.append(getTituloAtividade(ATIVIDADES.ATIVIDADES_ACADEMICAS.getNomeAtividade()));
 
 		String qtdeHorasAtividade = "";
 		String dtInicioAtividade = "";
@@ -271,17 +264,18 @@ public class AtividadeWrapperTxt implements IAtividadeWrapper {
 			Matcher matcherDescricaoComplementar = patternDescricaoComplementar.matcher(linha);
 			if (matcherDescricaoComplementar.find()) {
 				sb.append(getSequencialAtividade());
-				sb.append("descricaoAtividade: ");
+				sb.append(DESCRICAO_ATIVIDADE);
 				sb.append(matcherDescricaoComplementar.group(1));
 				sb.append(QUEBRA_DE_LINHA);
-				sb.append("qtdeHorasAtividade: ");
+				sb.append(QTDE_HORAS_ATIVIDADE);
 				sb.append(qtdeHorasAtividade);
 				sb.append(QUEBRA_DE_LINHA);
-				sb.append("dtInicioAtividade: ");
+				sb.append(DT_INICIO_ATIVIDADE);
 				sb.append(dtInicioAtividade);
 				sb.append(QUEBRA_DE_LINHA);
-				sb.append("dtFimAtividade: ");
+				sb.append(DT_FIM_ATIVIDADE);
 				sb.append(dtFimAtividade);
+				sb.append(QUEBRA_DE_LINHA);
 				sb.append(QUEBRA_DE_LINHA);
 			}
 
@@ -301,11 +295,13 @@ public class AtividadeWrapperTxt implements IAtividadeWrapper {
 	 * @param atividade string contendo o grupo de atividades Administrativas
 	 * @return string contendo as atividades Administrativas
 	 */
-	private String extrairAtividadesAdministrativas(String atividade) {
+	protected String extrairAtividadesAdministrativas(String atividade) {
 		StringBuilder sb = new StringBuilder();
 
 		String[] linhas = atividade.split(QUEBRA_DE_LINHA);
 		List<String> list = Arrays.asList(linhas);
+
+		sb.append(getTituloAtividade(ATIVIDADES.ATIVIDADES_ADMINISTRATIVAS.getNomeAtividade()));
 
 		String tabela = "";
 		for (String linha : list) {
@@ -318,9 +314,9 @@ public class AtividadeWrapperTxt implements IAtividadeWrapper {
 			Matcher matcherDescricao = patternDescricao.matcher(linha);
 			if (matcherDescricao.find()) {
 				sb.append(getSequencialAtividade());
-				sb.append("descricaoAtividade: ");
+				sb.append(DESCRICAO_ATIVIDADE);
 				sb.append(tabela);
-				sb.append(" - ");
+				sb.append(SEPARADOR);
 				int posicaoDescricao = list.indexOf(linha);
 				List<String> subList = list.subList(posicaoDescricao, list.size() - 1);
 				StringBuilder subListBuilder = new StringBuilder();
@@ -337,26 +333,37 @@ public class AtividadeWrapperTxt implements IAtividadeWrapper {
 				sb.append(QUEBRA_DE_LINHA);
 			}
 
-			Pattern patternChaDtIniDtFim = Pattern.compile(Patterns.PATTERN_CHA_DTINI_DTFIM);
-			Matcher matcherChaDtIniDtFim = patternChaDtIniDtFim.matcher(linha.replace("de ", ""));
-			if (matcherChaDtIniDtFim.find()) {
-				sb.append("qtdeHorasAtividade: ");
-				sb.append(matcherChaDtIniDtFim.group(1));
-				sb.append(QUEBRA_DE_LINHA);
-				sb.append("dtInicioAtividade: ");
-				sb.append(matcherChaDtIniDtFim.group(2));
-				sb.append(QUEBRA_DE_LINHA);
-				sb.append("dtFimAtividade: ");
-				sb.append(matcherChaDtIniDtFim.group(3));
-				sb.append(QUEBRA_DE_LINHA);
-			}
+			sb.append(getChaDtInicioDtFim(linha));
 		}
 		return sb.toString();
 	}
 
+	private String getChaDtInicioDtFim(String linha) {
+		StringBuilder sb = new StringBuilder();
+		Pattern patternChaDtIniDtFim = Pattern.compile(Patterns.PATTERN_CHA_DTINI_DTFIM);
+		Matcher matcherChaDtIniDtFim = patternChaDtIniDtFim.matcher(linha);
+		if (matcherChaDtIniDtFim.find()) {
+			sb.append(QTDE_HORAS_ATIVIDADE);
+			sb.append(matcherChaDtIniDtFim.group(1));
+			sb.append(QUEBRA_DE_LINHA);
+			sb.append(DT_INICIO_ATIVIDADE);
+			sb.append(matcherChaDtIniDtFim.group(2));
+			sb.append(QUEBRA_DE_LINHA);
+			sb.append(DT_FIM_ATIVIDADE);
+			sb.append(matcherChaDtIniDtFim.group(3));
+			sb.append(QUEBRA_DE_LINHA);
+			sb.append(QUEBRA_DE_LINHA);
+		}
+		return sb.toString();
+	}
+
+	private String getTituloAtividade(String titulo) {
+		return "################ " + titulo + " ################\n\n";
+	}
+
 	private String getSequencialAtividade() {
 		sequencialAtividade++;
-		return "sequencialAtividade: " + sequencialAtividade + QUEBRA_DE_LINHA;
+		return SEQUENCIAL_ATIVIDADE + sequencialAtividade + QUEBRA_DE_LINHA;
 	}
 
 }
