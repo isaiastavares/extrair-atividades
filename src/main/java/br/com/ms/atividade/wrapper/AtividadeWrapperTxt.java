@@ -361,7 +361,7 @@ public class AtividadeWrapperTxt implements IAtividadeWrapper {
 	}
 
 	private String getTituloAtividade(String titulo) {
-		return "################ " + titulo + " ################\n";
+		return "\n################ " + titulo + " ################\n";
 	}
 
 	private String getSequencialAtividade() {
