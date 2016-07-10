@@ -1,0 +1,31 @@
+################ Atividades de orientação ################
+
+sequencialAtividade: 1
+descricaoAtividade: ESTUDO DE CASO: IMPLANTAÇÃO DE PROCESSOS DA ITIL EM UMA MICROEMPRESA
+qtdeHorasAtividade: 1
+dtInicioAtividade: 01/08/2014
+dtFimAtividade: 31/12/2014
+
+sequencialAtividade: 2
+descricaoAtividade: UM ESTUDO DE CASO SOBRE ENGENHARIA DE REQUISITOS EM DESENVOLVIMENTO DE SOFTWARE BASEADO NO SCRUM
+qtdeHorasAtividade: 1
+dtInicioAtividade: 01/01/2014
+dtFimAtividade: 31/12/2014
+
+sequencialAtividade: 3
+descricaoAtividade: UM ESTUDO DE CASO SOBRE IMPLANTAÇÃO DE COBIT EM UMA MICROEMPRESA
+qtdeHorasAtividade: 1
+dtInicioAtividade: 01/08/2014
+dtFimAtividade: 31/12/2014
+
+sequencialAtividade: 4
+descricaoAtividade: DEFINIÇÃO DE PROCESSOS NA FABRICA DE SOFTWARE DO INSTITUTO DE INFORMÁTICA DA UFG
+qtdeHorasAtividade: 1
+dtInicioAtividade: 01/08/2014
+dtFimAtividade: 31/12/2014
+
+sequencialAtividade: 5
+descricaoAtividade: UM ESTUDO DE CASO SOBRE A INFLUÊNCIA DA REVISÃO DE CÓDIGO NA SEGURANÇA DE SOFTWARE
+qtdeHorasAtividade: 32
+dtInicioAtividade: 01/01/2014
+dtFimAtividade: 30/08/2014

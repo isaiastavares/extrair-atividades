@@ -1,0 +1,7 @@
+################ Atividades de extensão ################
+
+sequencialAtividade: 1
+descricaoAtividade: Palestra sobe Qualidade de Software com MPS.BR - Membros da comunidade acadêmica da Universo em Goiânia-GO
+qtdeHorasAtividade: 4
+dtInicioAtividade: 29/04/2014
+dtFimAtividade: 29/04/2014

@@ -1,0 +1,30 @@
+Tabela: Atividades acadêmicas e administrativas designadas por portaria do Reitor, Pró-Reitor ou Diretor de Unidade Acadêmica com carga horária >=150 horas
+Descrição: MEMBRO DO NÚCLEO DOCENTE ESTRUTURANTE - N.D.E. - ENGENHARIA DE SOFTWARE
+Órgão emissor INF Órgão servido INF
+Portaria 19 CHA: 100 Data início: 01/01/2014 Data término: 31/12/2014
+Tabela: Membros da CPPD ou da Comissão de Avaliação Institucional ou da Comissão Própria de Avaliação ou da CAD
+Descrição:
+PRESIDENTE DA COMISSÃO DE AVALIAÇÃO DOCENTE - CAD - PARA TRATAR PRIORITARIAMENTE 
+DOS PROCESSOS DE PROMOÇÃO À CLASSE D
+Órgão emissor INF Órgão servido INF
+Portaria 005 CHA: 100 Data início: 01/01/2014 Data término: 31/12/2014
+Data: 28/05/2015 23:27:40                                                  JULIANO LOPES DE OLIVEIRA Página  5 / 11
+UNIVERSIDADE FEDERAL DE GOIÁS
+SISTEMA DE CADASTRO DE ATIVIDADES DOCENTES
+EXTRATO DAS ATIVIDADES - ANO BASE: 2014
+Tabela: Atividades acadêmicas e administrativas designadas por portaria do Reitor, Pró-Reitor ou Diretor de Unidade Acadêmica com carga horária >=150 horas
+Descrição: COORDENADOR DA FÁBRICA DE SOFTWARE
+Órgão emissor INF Órgão servido INF
+Portaria 011 CHA: 100 Data início: 01/01/2014 Data término: 31/12/2014
+Tabela: Outras Atividades Administrativas e de Representação
+Descrição: Preenchimento de RADOC
+Órgão emissor INF Órgão servido INF
+Portaria NA CHA: 8 Data início: 01/01/2014 Data término: 12/11/2014
+Tabela: Outras Atividades Administrativas e de Representação
+Descrição: Preenchimento de CV Lattes
+Órgão emissor INF Órgão servido INF
+Portaria NA CHA: 8 Data início: 01/01/2014 Data término: 12/11/2014
+Tabela: Outras Atividades Administrativas e de Representação
+Descrição: PARTICIPAÇÕES EM REUNIÕES DO CD 2014
+Órgão emissor INF Órgão servido INF
+Portaria NA CHA: 12 Data início: 01/01/2014 Data término: 31/12/2014

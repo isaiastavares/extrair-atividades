@@ -1,0 +1,39 @@
+Título do trabalho: ESTUDO DE CASO: IMPLANTAÇÃO DE PROCESSOS DA ITIL EM UMA MICROEMPRESA
+Tabela: Aluno orientado em projeto de final de curso
+Orientando: ARIEL SOUZA SILVA
+Matrícula: 100353 Função do docente: Orientador
+Nível: Graduação Curso: SISTEMAS DE INFORMAÇÃO
+IES: UNIVERSIDADE FEDERAL DE GOIAS
+CHA: 1 Data início: 01/08/2014 Data término: 31/12/2014 Tipo Orientação: PRESENCIAL
+Título do trabalho: UM ESTUDO DE CASO SOBRE ENGENHARIA DE REQUISITOS EM DESENVOLVIMENTO DE SOFTWARE BASEADO NO SCRUM
+Tabela: Aluno orientado em projeto de final de curso
+Orientando: IGOR ALVES DE OLIVEIRA
+Matrícula: 096532 Função do docente: Orientador
+Nível: Graduação Curso: SISTEMAS DE INFORMAÇÃO
+IES: UNIVERSIDADE FEDERAL DE GOIAS
+CHA: 1 Data início: 01/01/2014 Data término: 31/12/2014 Tipo Orientação: PRESENCIAL
+Título do trabalho: UM ESTUDO DE CASO SOBRE IMPLANTAÇÃO DE COBIT EM UMA MICROEMPRESA
+Tabela: Aluno orientado em projeto de final de curso
+Orientando: FARID IBRAIM CHAUD JUNIOR
+Matrícula: 100358 Função do docente: Orientador
+Nível: Graduação Curso: SISTEMAS DE INFORMAÇÃO
+IES: UNIVERSIDADE FEDERAL DE GOIAS
+CHA: 1 Data início: 01/08/2014 Data término: 31/12/2014 Tipo Orientação: PRESENCIAL
+Título do trabalho: DEFINIÇÃO DE PROCESSOS NA FABRICA DE SOFTWARE DO INSTITUTO DE INFORMÁTICA DA UFG
+Tabela: Aluno orientado em projeto de final de curso
+Data: 28/05/2015 23:27:40                                                  JULIANO LOPES DE OLIVEIRA Página  2 / 11
+UNIVERSIDADE FEDERAL DE GOIÁS
+SISTEMA DE CADASTRO DE ATIVIDADES DOCENTES
+EXTRATO DAS ATIVIDADES - ANO BASE: 2014
+Orientando: DEBORAH SANTANA ULACIA
+Matrícula: 110977 Função do docente: Orientador
+Nível: Graduação Curso: CIÊNCIAS DA COMPUTAÇÃO
+IES: UNIVERSIDADE FEDERAL DE GOIAS
+CHA: 1 Data início: 01/08/2014 Data término: 31/12/2014 Tipo Orientação: PRESENCIAL
+Título do trabalho: UM ESTUDO DE CASO SOBRE A INFLUÊNCIA DA REVISÃO DE CÓDIGO NA SEGURANÇA DE SOFTWARE
+Tabela: Aluno orientado em programa de iniciação científica(PIBIC/PIVIC/PROLICEN/PICME-OBMEP)
+Orientando: VINICIUS ASSUNÇÃO MABONI
+Matrícula: 110267 Função do docente: Orientador
+Nível: Graduação Curso: ENGENHARIA DE SOFTWARE
+IES: UNIVERSIDADE FEDERAL DE GOIAS
+CHA: 32 Data início: 01/01/2014 Data término: 30/08/2014 Tipo Orientação: PRESENCIAL

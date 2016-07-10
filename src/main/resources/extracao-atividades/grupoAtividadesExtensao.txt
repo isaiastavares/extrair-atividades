@@ -1,0 +1,4 @@
+Tabela: Palestrante, conferencista ou participante em mesa redonda em evento científico, cultural ou artístico - Evento regional ou local
+CHA: 4 Data início: 29/04/2014 Data término: 29/04/2014
+Descrição da atividade: Palestra sobe Qualidade de Software com MPS.BR
+Descrição da clientela: Membros da comunidade acadêmica da Universo em Goiânia-GO

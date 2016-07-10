@@ -1,0 +1,13 @@
+################ Atividades em projetos ################
+
+sequencialAtividade: 1
+descricaoAtividade: ESTRATÉGIAS E MÉTODOS PARA MELHORIA DE SOFTWARE
+qtdeHorasAtividade: 400
+dtInicioAtividade: 04/01/2010
+dtFimAtividade: 31/12/2015
+
+sequencialAtividade: 2
+descricaoAtividade: Simpósio Brasileiro de Sistemas de Informação
+qtdeHorasAtividade: 100
+dtInicioAtividade: 30/06/2014
+dtFimAtividade: 18/08/2014

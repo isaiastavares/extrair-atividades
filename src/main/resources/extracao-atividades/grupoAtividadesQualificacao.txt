@@ -1,0 +1,6 @@
+Tabela: Docente em licença para capacitação (Artigo 87, Lei N.8112)
+Descrição: Licença para Capacitação na área de Gestão de Serviços de Tecnologia da Informação, com fundamento no Artigo 87, da Lei nº 9527, de 10/12/97.
+CHA: 440 Data de início: 15/03/2014 Data de término: 14/06/2014
+Tabela: Participação em Congressos, Seminários, Encontros, Jornadas etc.
+Descrição: CNPq - 5º Encontro Técnico do RHAE Pesquisador na Empresa Brasília-DF
+CHA: 16 Data de início: 11/11/2014 Data de término: 12/11/2014

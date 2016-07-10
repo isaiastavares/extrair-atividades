@@ -1,0 +1,37 @@
+################ Atividades administrativas ################
+
+sequencialAtividade: 1
+descricaoAtividade: Atividades acadêmicas e administrativas designadas por portaria do Reitor, Pró-Reitor ou Diretor de Unidade Acadêmica com carga horária >=150 horas -  MEMBRO DO NÚCLEO DOCENTE ESTRUTURANTE - N.D.E. - ENGENHARIA DE SOFTWARE
+qtdeHorasAtividade: 100
+dtInicioAtividade: 01/01/2014
+dtFimAtividade: 31/12/2014
+
+sequencialAtividade: 2
+descricaoAtividade: Membros da CPPD ou da Comissão de Avaliação Institucional ou da Comissão Própria de Avaliação ou da CAD - 
+qtdeHorasAtividade: 100
+dtInicioAtividade: 01/01/2014
+dtFimAtividade: 31/12/2014
+
+sequencialAtividade: 3
+descricaoAtividade: Atividades acadêmicas e administrativas designadas por portaria do Reitor, Pró-Reitor ou Diretor de Unidade Acadêmica com carga horária >=150 horas -  COORDENADOR DA FÁBRICA DE SOFTWARE
+qtdeHorasAtividade: 100
+dtInicioAtividade: 01/01/2014
+dtFimAtividade: 31/12/2014
+
+sequencialAtividade: 4
+descricaoAtividade: Outras Atividades Administrativas e de Representação -  Preenchimento de RADOC
+qtdeHorasAtividade: 8
+dtInicioAtividade: 01/01/2014
+dtFimAtividade: 12/11/2014
+
+sequencialAtividade: 5
+descricaoAtividade: Outras Atividades Administrativas e de Representação -  Preenchimento de CV Lattes
+qtdeHorasAtividade: 8
+dtInicioAtividade: 01/01/2014
+dtFimAtividade: 12/11/2014
+
+sequencialAtividade: 6
+descricaoAtividade: Outras Atividades Administrativas e de Representação -  PARTICIPAÇÕES EM REUNIÕES DO CD 2014
+qtdeHorasAtividade: 12
+dtInicioAtividade: 01/01/2014
+dtFimAtividade: 31/12/2014

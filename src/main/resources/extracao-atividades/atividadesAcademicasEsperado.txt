@@ -1,0 +1,37 @@
+################ Atividades acadêmicas especiais ################
+
+sequencialAtividade: 1
+descricaoAtividade: Banca de PFC de Amanda Lira - Experiência de Implantação de Processos numa Fábrica de Software
+qtdeHorasAtividade: 4
+dtInicioAtividade: 17/07/2014
+dtFimAtividade: 17/07/2014
+
+sequencialAtividade: 2
+descricaoAtividade: Banca de PFC de Igor Alves - Um estudo de caso sobre Engenharia de Requisitos em desenvolvimento de software baseado no Scrum
+qtdeHorasAtividade: 4
+dtInicioAtividade: 16/12/2014
+dtFimAtividade: 16/12/2014
+
+sequencialAtividade: 3
+descricaoAtividade: Banca de PFC de Farid Junior - Um estudo de caso sobre implantação de Cobit em uma microempresa
+qtdeHorasAtividade: 4
+dtInicioAtividade: 16/12/2014
+dtFimAtividade: 16/12/2014
+
+sequencialAtividade: 4
+descricaoAtividade: Banca de PFC de Ariel Souza - Estudo de Caso: Implantação de Processos da ITIL em uma Microempresa
+qtdeHorasAtividade: 4
+dtInicioAtividade: 16/12/2014
+dtFimAtividade: 16/12/2014
+
+sequencialAtividade: 5
+descricaoAtividade: Banca de PFC de Deborah Ulacia - Definição de Processos na Fábrica de Software do INF
+qtdeHorasAtividade: 4
+dtInicioAtividade: 16/12/2014
+dtFimAtividade: 16/12/2014
+
+sequencialAtividade: 6
+descricaoAtividade: Membro do Comitê Julgador do Concurso Nacional de Teses e Dissertações em Qualidade de Software
+qtdeHorasAtividade: 12
+dtInicioAtividade: 03/07/2014
+dtFimAtividade: 03/08/2014

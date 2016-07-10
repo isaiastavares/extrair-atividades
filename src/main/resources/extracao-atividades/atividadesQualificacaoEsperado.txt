@@ -1,0 +1,13 @@
+################ Atividades de qualificação ################
+
+sequencialAtividade: 1
+descricaoAtividade:  Licença para Capacitação na área de Gestão de Serviços de Tecnologia da Informação, com fundamento no Artigo 87, da Lei nº 9527, de 10/12/97.
+qtdeHorasAtividade: 440
+dtInicioAtividade: 15/03/2014
+dtFimAtividade: 14/06/2014
+
+sequencialAtividade: 2
+descricaoAtividade:  CNPq - 5º Encontro Técnico do RHAE Pesquisador na Empresa Brasília-DF
+qtdeHorasAtividade: 16
+dtInicioAtividade: 11/11/2014
+dtFimAtividade: 12/11/2014

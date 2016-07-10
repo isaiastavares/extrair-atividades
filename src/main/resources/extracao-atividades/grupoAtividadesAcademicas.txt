@@ -1,0 +1,28 @@
+Tabela: Membro de banca de defesa de monografia, projeto final de curso e outros tipos de bancas
+CHA: 4 Data início: 17/07/2014 Data término: 17/07/2014
+Descrição Complementar: Banca de PFC de Amanda Lira - Experiência de Implantação de Processos numa Fábrica de Software
+Descrição da Clientela: INF
+Tabela: Membro de banca de defesa de monografia, projeto final de curso e outros tipos de bancas
+CHA: 4 Data início: 16/12/2014 Data término: 16/12/2014
+Descrição Complementar: Banca de PFC de Igor Alves - Um estudo de caso sobre Engenharia de Requisitos em desenvolvimento de software baseado no Scrum
+Descrição da Clientela: INF
+Tabela: Membro de banca de defesa de monografia, projeto final de curso e outros tipos de bancas
+CHA: 4 Data início: 16/12/2014 Data término: 16/12/2014
+Data: 28/05/2015 23:27:40                                                  JULIANO LOPES DE OLIVEIRA Página  4 / 11
+UNIVERSIDADE FEDERAL DE GOIÁS
+SISTEMA DE CADASTRO DE ATIVIDADES DOCENTES
+EXTRATO DAS ATIVIDADES - ANO BASE: 2014
+Descrição Complementar: Banca de PFC de Farid Junior - Um estudo de caso sobre implantação de Cobit em uma microempresa
+Descrição da Clientela: INF
+Tabela: Membro de banca de defesa de monografia, projeto final de curso e outros tipos de bancas
+CHA: 4 Data início: 16/12/2014 Data término: 16/12/2014
+Descrição Complementar: Banca de PFC de Ariel Souza - Estudo de Caso: Implantação de Processos da ITIL em uma Microempresa
+Descrição da Clientela: INF
+Tabela: Membro de banca de defesa de monografia, projeto final de curso e outros tipos de bancas
+CHA: 4 Data início: 16/12/2014 Data término: 16/12/2014
+Descrição Complementar: Banca de PFC de Deborah Ulacia - Definição de Processos na Fábrica de Software do INF
+Descrição da Clientela: INF
+Tabela: Membro de corpo de júri - Concursos nacionais
+CHA: 12 Data início: 03/07/2014 Data término: 03/08/2014
+Descrição Complementar: Membro do Comitê Julgador do Concurso Nacional de Teses e Dissertações em Qualidade de Software
+Descrição da Clientela: SBC
